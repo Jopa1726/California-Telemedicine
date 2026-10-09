@@ -1,0 +1,96 @@
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="{{CA_BASE}}">California</a> / Contact &amp; support</p>
+    <h1>Contact &amp; patient support</h1>
+    <p>Questions before you book, or help after your visit — we’re here. Please keep medical details out of public messages.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid grid-2">
+      <!-- Notify / launch updates -->
+      <div class="panel reveal" id="notify">
+        <span class="pill">Launch updates</span>
+        <h2>Be first to know when California opens</h2>
+        <p>Leave your email and we’ll let you know the moment California evaluations are available. Minimal details only — no medical information.</p>
+
+        <form class="form" data-public-form data-endpoint="TODO_FORM_ENDPOINT" novalidate>
+          <div class="field">
+            <label for="n-name">Name</label>
+            <input id="n-name" name="name" type="text" autocomplete="name" required aria-describedby="n-name-err" data-error="Please enter your name.">
+            <span class="error-text" id="n-name-err" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="n-email">Email</label>
+            <input id="n-email" name="email" type="email" autocomplete="email" required aria-describedby="n-email-err" data-error="Please enter a valid email.">
+            <span class="error-text" id="n-email-err" role="alert"></span>
+          </div>
+          <label class="consent">
+            <input type="checkbox" name="consent" required aria-describedby="n-consent-err" data-error="Please confirm to continue.">
+            <span>{{NOTIFY_CONSENT}}</span>
+          </label>
+          <span class="error-text" id="n-consent-err" role="alert"></span>
+          <!-- honeypot (spam protection) -->
+          <div class="field" aria-hidden="true" style="position:absolute;left:-9999px"><label for="n-company">Company</label><input id="n-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+          <button class="btn btn-primary" type="submit">Notify me at launch</button>
+          <p class="form-msg" role="status" hidden></p>
+          <p class="privacy-callout">Marketing updates are separate from any clinical consent. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <!-- General inquiry -->
+      <div class="panel reveal">
+        <span class="pill">General questions</span>
+        <h2>Ask a question</h2>
+        <p>For non‑urgent questions about the service. <strong>Do not include medical history, diagnoses, or ID documents</strong> — those belong in the secure clinical system, not a public form.</p>
+
+        <form class="form" data-public-form data-endpoint="TODO_FORM_ENDPOINT" novalidate>
+          <div class="field">
+            <label for="q-name">Name</label>
+            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-err" data-error="Please enter your name.">
+            <span class="error-text" id="q-name-err" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="q-email">Email</label>
+            <input id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-err" data-error="Please enter a valid email.">
+            <span class="error-text" id="q-email-err" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="q-state">Which state are you in?</label>
+            <select id="q-state" name="state" required aria-describedby="q-state-err" data-error="Please choose your state.">
+              <option value="">Choose…</option>
+              <option>California</option>
+              <option>Colorado</option>
+              <option>Another state</option>
+            </select>
+            <span class="error-text" id="q-state-err" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="q-msg">Your question <span class="hint">(no medical details, please)</span></label>
+            <textarea id="q-msg" name="message" rows="4" required aria-describedby="q-msg-err" data-error="Please add a short message."></textarea>
+            <span class="error-text" id="q-msg-err" role="alert"></span>
+          </div>
+          <div class="field" aria-hidden="true" style="position:absolute;left:-9999px"><label for="q-company">Company</label><input id="q-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+          <button class="btn btn-primary" type="submit">Send question</button>
+          <p class="form-msg" role="status" hidden></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel panel-ivory reveal" style="margin-top:1.6rem">
+      <div class="grid grid-2">
+        <div>
+          <h3>Patient support</h3>
+          <p>Email: <span class="todo-flag">TODO</span> a California support address will be published here.<br>
+             Hours: <span class="todo-flag">TODO</span> support hours with time zone.</p>
+        </div>
+        <div>
+          <h3>Colorado team</h3>
+          <p>For Colorado clinic matters, call <a href="{{CO_PHONE_HREF}}">{{CO_PHONE}}</a> or visit the <a href="{{CO_HOME}}">Colorado site</a>.</p>
+          <p class="media-note">We’re a telemedicine service for California — there is no California walk‑in office.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

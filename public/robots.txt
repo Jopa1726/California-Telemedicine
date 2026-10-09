@@ -1,0 +1,4 @@
+# Preview robots.txt. On production, REMOVE Disallow and keep the sitemap line.
+User-agent: *
+Disallow: /california/legal/
+Sitemap: https://drnatmed.com/california/sitemap-california.xml

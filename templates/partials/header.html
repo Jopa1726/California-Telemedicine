@@ -1,0 +1,45 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{CA_BASE}}" aria-label="{{BRAND_CA}} home">
+      <img src="/assets/img/logo.svg" alt="" width="34" height="34" aria-hidden="true">
+      <span class="brand-text">
+        <span class="brand-name">Doctors of Natural Medicine</span>
+        <span class="brand-state">California</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="California service">
+      <ul>
+        {{NAV}}
+      </ul>
+      <div class="nav-cta">
+        {% if LAUNCH_MODE %}
+        <a class="btn btn-primary btn-sm" href="{{CA_BASE}}contact/#notify">Get launch updates</a>
+        {% else %}
+        <a class="btn btn-primary btn-sm" href="#book">Book a California evaluation</a>
+        {% endif %}
+        <a class="nav-careers" href="{{CAREERS}}">For physicians</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- State selector: route patients to the right journey before any booking -->
+  <div class="state-selector" role="region" aria-label="Choose your state">
+    <div class="wrap state-selector-inner">
+      <span class="state-selector-label">Where are you located?</span>
+      <div class="state-selector-options">
+        <a class="state-pill is-active" href="{{CA_BASE}}" aria-current="true">California (telemedicine)</a>
+        <a class="state-pill" href="{{CO_HOME}}">Colorado (in‑clinic &amp; telehealth)</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="launch-banner" role="status">
+    <div class="wrap">{{LAUNCH_BANNER}}</div>
+  </div>
+</header>

@@ -1,0 +1,49 @@
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="{{CA_BASE}}">California</a> / Renewals</p>
+    <h1>Renewing your California recommendation</h1>
+    <p>A straightforward renewal with a California‑licensed physician — whether or not you got your original recommendation from us.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div class="panel reveal">
+        <h2>Switching to us is fine</h2>
+        <p>You don’t have to use the same provider every time. If your California recommendation came from somewhere else, you’re welcome to renew with one of our California‑licensed physicians.</p>
+      </div>
+      <div class="panel reveal">
+        <h2>A real review, every time</h2>
+        <p>A compliant renewal isn’t just a fee you pay to keep an old letter alive. A California‑licensed physician reviews your current situation so your recommendation reflects an up‑to‑date evaluation.</p>
+      </div>
+    </div>
+
+    <div class="panel panel-ivory reveal" style="margin-top:1.6rem">
+      <h2>What to have ready</h2>
+      <ul class="check-list">
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>A valid government‑issued photo ID.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Your current or recently expired recommendation, if you have it, so the physician can review your prior approval.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>A private space and a device with a camera — you must be physically located in California during the visit.</li>
+      </ul>
+      <p class="media-note" style="margin-top:.6rem">You’ll upload any documents inside the secure clinical system during intake — never through a public web form or email.</p>
+    </div>
+
+    <div class="callout" style="margin-top:1.6rem">
+      <h3>Timing tip</h3>
+      <p>Renewing a little before your current recommendation lapses helps you avoid a gap. Renewal cost is shown on our <a href="{{CA_BASE}}pricing/">pricing page</a>.</p>
+    </div>
+
+    <div class="cta-band reveal" style="margin-top:1.8rem">
+      {% if LAUNCH_MODE %}
+      <h2>Renewals open at launch</h2>
+      <p>Join the launch list and we’ll tell you as soon as California renewals are available.</p>
+      <div class="hero-cta"><a class="btn btn-primary" href="{{CA_BASE}}contact/#notify">Get launch updates</a></div>
+      {% else %}
+      <h2>Ready to renew?</h2>
+      <p>Start a renewal with a California‑licensed physician.</p>
+      <div class="hero-cta"><a class="btn btn-primary" data-booking-cta href="#book-provider">Start my renewal</a></div>
+      {% endif %}
+    </div>
+  </div>
+</section>

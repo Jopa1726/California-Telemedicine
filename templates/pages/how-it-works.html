@@ -1,0 +1,75 @@
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="{{CA_BASE}}">California</a> / How it works</p>
+    <h1>How online California evaluations work</h1>
+    <p>A clear look at every step — and an honest explanation of what the physician, not the website, decides.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="step-flow">
+      <div class="panel reveal">
+        <span class="pill">Step 1</span>
+        <h2>Tell us where you are, then choose a time</h2>
+        <p>Because a California patient must be evaluated by a California‑licensed physician, the first thing we ask is your state. From there you choose an appointment time that fits your schedule, shown in your local time zone.</p>
+      </div>
+      <div class="panel reveal">
+        <span class="pill">Step 2</span>
+        <h2>Complete secure intake and meet your physician</h2>
+        <p>You’ll complete intake inside a secure clinical system — not an ordinary web form. During your video visit, a California‑licensed physician reviews your information, discusses your health, and confirms you are physically located in California.</p>
+        <div class="callout" style="margin-top:1rem">
+          <strong>Your privacy matters.</strong> Medical history, documents, and consent live only in the approved secure clinical system. We never collect that information through public website forms, email, or analytics.
+        </div>
+      </div>
+      <div class="panel reveal">
+        <span class="pill">Step 3</span>
+        <h2>If appropriate, receive a recommendation and next steps</h2>
+        <p>If the physician determines medical cannabis may be appropriate for you, you’ll receive a recommendation and clear guidance on what to do next — including how the optional, county‑issued MMIC works if you want it. If cannabis isn’t appropriate, the physician will explain why.</p>
+      </div>
+    </div>
+
+    <div class="callout warn" style="margin-top:1.6rem">
+      <strong>What approval depends on.</strong> A recommendation is a medical decision based on the physician’s evaluation. It is not guaranteed, it is not a conventional prescription, and it is not the government MMIC.
+    </div>
+  </div>
+</section>
+
+<!-- Pre-booking state router -->
+<section class="bg-ivory" id="start">
+  <div class="wrap">
+    <p class="eyebrow">Get started</p>
+    <h2>Which best describes you?</h2>
+    <p class="lead measure">We ask this first so we send you to the right physician and process.</p>
+
+    <div id="booking-router" class="panel reveal" style="margin-top:1.2rem">
+      <div class="grid grid-3" role="group" aria-label="Choose your situation">
+        <button class="btn btn-ghost" data-route="ca-new" type="button">I’m in California — new patient</button>
+        <button class="btn btn-ghost" data-route="ca-renew" type="button">I’m in California — renewing</button>
+        <button class="btn btn-ghost" data-route="co" type="button">I’m in Colorado</button>
+      </div>
+      <div class="grid grid-2" role="group" aria-label="Other" style="margin-top:1rem">
+        <button class="btn btn-ghost" data-route="question" type="button">I just have a question</button>
+        <button class="btn btn-ghost" data-route="physician" type="button">I’m a physician interested in joining</button>
+      </div>
+      <div data-router-output hidden style="margin-top:1.2rem"></div>
+      <noscript><p class="media-note" style="margin-top:1rem">For routing without JavaScript: <a href="{{CA_BASE}}contact/">California patients &amp; questions</a> · <a href="https://drnatmed.com/appointment/">Colorado booking</a> · <a href="{{CAREERS}}">Physicians</a>.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      {% if LAUNCH_MODE %}
+      <h2>California isn’t open for booking yet</h2>
+      <p>Join the launch list and we’ll let you know the moment appointments are available.</p>
+      <div class="hero-cta"><a class="btn btn-primary" href="{{CA_BASE}}contact/#notify">Get launch updates</a></div>
+      {% else %}
+      <h2>Ready to begin?</h2>
+      <p>Pick the option above that matches you, or jump straight to secure booking.</p>
+      <div class="hero-cta"><a class="btn btn-primary" data-booking-cta href="#book-provider">Book a California evaluation</a></div>
+      {% endif %}
+    </div>
+  </div>
+</section>

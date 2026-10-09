@@ -1,0 +1,243 @@
+<!-- A. HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">California · Telemedicine</p>
+      <h1>Medical cannabis evaluations, from the comfort of home.</h1>
+      <p class="lead">
+        A thoughtful, unhurried evaluation with a <strong>California‑licensed physician</strong> by secure video —
+        for patients physically located in California. Backed by a clinic brand that has served Colorado patients since {{ESTABLISHED}}.
+      </p>
+
+      <div class="hero-cta">
+        {% if LAUNCH_MODE %}
+        <a class="btn btn-primary" href="{{CA_BASE}}contact/#notify">Get launch updates</a>
+        <a class="btn btn-ghost" href="{{CA_BASE}}how-it-works/">Learn how it works</a>
+        {% else %}
+        <a class="btn btn-primary" href="#book">Book a California evaluation</a>
+        <a class="btn btn-ghost" href="{{CA_BASE}}how-it-works/">Learn how it works</a>
+        {% endif %}
+      </div>
+
+      {% if LAUNCH_MODE %}
+      <p class="media-note" style="margin-top:1rem">We are not booking California appointments yet. No payment is taken in launch mode.</p>
+      {% endif %}
+
+      <ul class="hero-points">
+        <li>{% if LAUNCH_MODE %}<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="#8fd0bf" stroke-width="2"/><path d="M6 10l3 3 5-6" stroke="#8fd0bf" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endif %}Evaluations performed only by physicians who hold a current California license.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="#8fd0bf" stroke-width="2"/><path d="M6 10l3 3 5-6" stroke="#8fd0bf" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Clear information, transparent fees, and real human support.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="#8fd0bf" stroke-width="2"/><path d="M6 10l3 3 5-6" stroke="#8fd0bf" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Approval always depends on the physician’s independent evaluation.</li>
+      </ul>
+    </div>
+
+    <div class="hero-figure">
+      <img src="/assets/img/hero-consult.svg" alt="A telemedicine video consultation shown on a laptop" width="420" height="320" style="max-width:100%;height:auto">
+      <p class="media-note">Illustration. Authentic physician and patient photography will replace this once licensed assets are available.</p>
+    </div>
+  </div>
+</section>
+
+<!-- B. TRUST -->
+<section class="section-tight bg-tint">
+  <div class="wrap">
+    <div class="trust-strip reveal">
+      <div class="trust-item">
+        <div class="big">Since {{ESTABLISHED}}</div>
+        <div class="lbl">Established clinic brand serving Colorado</div>
+      </div>
+      <div class="trust-item">
+        <div class="big">4 clinics</div>
+        <div class="lbl">Colorado Springs · Lakewood · Fort Collins · Pueblo</div>
+      </div>
+      <div class="trust-item">
+        <div class="big">CA‑licensed</div>
+        <div class="lbl">California evaluations by California‑licensed physicians</div>
+      </div>
+      <div class="trust-item">
+        <div class="big">Telemedicine</div>
+        <div class="lbl">Secure video from home — no California office visit</div>
+      </div>
+    </div>
+    <p class="center media-note" style="margin-top:1rem">
+      Figures describe the established Colorado business. See our <a href="{{CA_BASE}}faq/">FAQ</a> for how California care differs.
+    </p>
+  </div>
+</section>
+
+<!-- C. HOW IT WORKS -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Three clear steps</h2>
+    <p class="lead measure">A simple path with a real physician at its center. There is no self‑checkout for a medical decision.</p>
+
+    <div class="grid grid-3" style="margin-top:1.6rem">
+      <div class="card reveal">
+        <span class="num">1</span>
+        <h3>Choose an appointment</h3>
+        <p>Pick a time that works for you. You’ll tell us which state you’re in so we route you to the right physician and process.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">2</span>
+        <h3>Secure intake &amp; meet your physician</h3>
+        <p>Complete secure intake, then meet a California‑licensed physician by video. You’ll confirm you are physically located in California during the clinical workflow.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">3</span>
+        <h3>Receive guidance — if appropriate</h3>
+        <p>If the physician determines it’s medically appropriate, you receive a recommendation and clear next steps. If not, they’ll explain why and discuss other options.</p>
+      </div>
+    </div>
+
+    <div class="callout warn" style="margin-top:1.4rem">
+      <strong>Approval is never guaranteed.</strong> A medical cannabis recommendation is a clinical decision made by the physician, not a product you purchase. Cannabis isn’t appropriate for everyone.
+    </div>
+  </div>
+</section>
+
+<!-- D. WHY PATIENTS CHOOSE US -->
+<section class="bg-ivory">
+  <div class="wrap">
+    <p class="eyebrow">Why patients choose us</p>
+    <h2>Experience you can feel, information you can trust</h2>
+    <div class="grid grid-2" style="margin-top:1.4rem">
+      <div class="card reveal">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <h3>An established clinical background</h3>
+        <p>We’re not a brand‑new name. Doctors of Natural Medicine has run cannabis evaluation clinics in Colorado since {{ESTABLISHED}}, and we’re bringing that care to California patients by telemedicine.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <h3>Understandable information</h3>
+        <p>Plain‑language explanations of what an evaluation is, what a recommendation means, and how the optional county MMIC differs — so you can decide with confidence.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 7h20M2 17h20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <h3>Clear, honest fees</h3>
+        <p>Transparent pricing with no surprise add‑ons, and an upfront explanation that any county MMIC fee is separate and paid to your county, not to us.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v10H9l-4 4V5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <h3>Helpful human support</h3>
+        <p>Real people to answer questions before and after your appointment — without pressure, and without asking for medical details over email.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- E. UNDERSTANDING CALIFORNIA ACCESS -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Understanding California access</p>
+    <h2>Recommendation vs. patient card vs. the government MMIC</h2>
+    <p class="lead measure">These three things are easy to confuse. Here’s the honest version.</p>
+
+    <div class="grid grid-3" style="margin-top:1.4rem">
+      <div class="card reveal">
+        <span class="pill">What we help with</span>
+        <h3>Physician’s recommendation</h3>
+        <p>A California‑licensed physician’s written recommendation that medical cannabis may be appropriate for you, based on an evaluation. It is <strong>not</strong> a conventional prescription.</p>
+      </div>
+      <div class="card reveal">
+        <span class="pill">Optional</span>
+        <h3>A private patient ID card</h3>
+        <p>Some services offer an optional private patient ID card for convenience. It is <strong>not</strong> a government document and is different from the MMIC below.</p>
+      </div>
+      <div class="card reveal">
+        <span class="pill">Government · county‑run</span>
+        <h3>The voluntary state MMIC</h3>
+        <p>The Medical Marijuana Identification Card is a <strong>voluntary</strong> card from your <strong>county</strong> program under the California Department of Public Health. We don’t issue it. It can reduce cannabis taxes and is honored statewide.</p>
+      </div>
+    </div>
+    <p style="margin-top:1.2rem"><a class="btn btn-secondary" href="{{CA_BASE}}resources/">Read the full explainer</a></p>
+  </div>
+</section>
+
+<!-- F. PHYSICIAN INTRODUCTION -->
+<section class="bg-green">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#8fd0bf">Who evaluates you</p>
+    <h2>California‑licensed physicians</h2>
+    {% if PHYSICIANS_VERIFIED %}
+    <p>Meet the physicians behind our California evaluations and verify their licenses on the Medical Board of California.</p>
+    <p style="margin-top:1rem"><a class="btn btn-ghost" href="{{CA_BASE}}physicians/">Meet our physicians</a></p>
+    {% else %}
+    <p class="measure">
+      Every California evaluation is performed by a physician who holds a <strong>current California license</strong> — a legal requirement for recommending cannabis to a California patient, whether in person or by telehealth.
+      We publish real physician names, photos, and license‑verification links here as each clinician is confirmed. We will never present out‑of‑state physicians as California clinicians.
+    </p>
+    <p style="margin-top:1rem"><a class="btn btn-ghost" href="{{CA_BASE}}physicians/">Our physician standard</a></p>
+    {% endif %}
+  </div>
+</section>
+
+<!-- G. PATIENT REVIEWS -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">What patients say</p>
+    <h2>Reviews</h2>
+    {% if CA_REVIEWS %}
+    <p>California patient reviews with source links appear here.</p>
+    {% else %}
+    <div class="panel panel-ivory reveal">
+      <p class="pill">{{CO_REVIEW_LABEL}}</p>
+      <p class="lead" style="margin:.6rem 0 0"><strong>{{CO_REVIEW_TEXT}}</strong></p>
+      <p class="media-note" style="margin-top:.6rem">
+        These reviews describe our Colorado clinics, not California telemedicine care. We’ll publish verified, attributable
+        California reviews with source links once we’ve served California patients. We won’t imply Colorado reviews describe California care.
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- H. QUESTIONS PATIENTS ASK -->
+<section class="bg-ivory">
+  <div class="wrap">
+    <p class="eyebrow center">Questions patients ask</p>
+    <h2 class="center">A few quick answers</h2>
+    <div class="faq-list" style="margin-top:1.4rem">
+      <details class="faq-item">
+        <summary>Who may be eligible?</summary>
+        <div class="faq-body">California law lets a physician recommend cannabis when, in their judgment, it may help a patient’s serious medical condition. Eligibility is decided case‑by‑case by the physician — not by a checklist.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is approval guaranteed?</summary>
+        <div class="faq-body">No. The physician must independently determine that medical cannabis is appropriate for you. We never guarantee approval, and we don’t offer “guaranteed approval” promises.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Where must I be during the appointment?</summary>
+        <div class="faq-body">You must be physically located in California at the time of your telemedicine evaluation with a California‑licensed physician. You’ll confirm this in the secure clinical workflow.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What if the physician doesn’t recommend cannabis?</summary>
+        <div class="faq-body">They’ll explain their reasoning and may suggest other options or that you follow up with your regular provider. A medical cannabis recommendation isn’t right for everyone.</div>
+      </details>
+    </div>
+    <p class="center" style="margin-top:1.4rem"><a class="btn btn-secondary" href="{{CA_BASE}}faq/">See the full FAQ</a></p>
+  </div>
+</section>
+
+<!-- I. CLOSING ACTION -->
+<section id="book">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      {% if LAUNCH_MODE %}
+      <h2>Be first to know when California opens</h2>
+      <p>We’ll email you the moment California evaluations are available. No spam, no payment, and you can unsubscribe anytime.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="{{CA_BASE}}contact/#notify">Get launch updates</a>
+        <a class="btn btn-ghost" href="{{CA_BASE}}how-it-works/">Learn how it works</a>
+      </div>
+      {% else %}
+      <h2>Ready when you are</h2>
+      <p>Tell us where you’re located and we’ll guide you to the right next step.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" data-booking-cta href="#book-provider">Book a California evaluation</a>
+        <a class="btn btn-ghost" href="{{CA_BASE}}how-it-works/">Learn how it works</a>
+      </div>
+      {% endif %}
+      <p style="margin-top:1.2rem"><a href="{{CA_BASE}}contact/" style="color:#cfe3d6">Have a question? Talk to patient support →</a></p>
+    </div>
+  </div>
+</section>

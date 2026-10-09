@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-label="Illustration of a telemedicine video consultation on a laptop">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a5d43"/><stop offset="1" stop-color="#12301f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="420" height="320" rx="18" fill="rgba(255,255,255,0.04)"/>
+  <!-- laptop -->
+  <rect x="70" y="60" width="280" height="175" rx="12" fill="#0e2318"/>
+  <rect x="82" y="72" width="256" height="140" rx="8" fill="url(#g1)"/>
+  <!-- video tile: clinician -->
+  <rect x="96" y="86" width="110" height="112" rx="8" fill="#15362440"/>
+  <circle cx="151" cy="128" r="22" fill="#8fd0bf"/>
+  <path d="M121 190c0-18 14-30 30-30s30 12 30 30z" fill="#8fd0bf"/>
+  <rect x="112" y="150" width="78" height="10" rx="5" fill="#2e8c86"/>
+  <!-- video tile: patient -->
+  <rect x="214" y="86" width="110" height="112" rx="8" fill="#15362440"/>
+  <circle cx="269" cy="128" r="22" fill="#d7ece9"/>
+  <path d="M239 190c0-18 14-30 30-30s30 12 30 30z" fill="#d7ece9"/>
+  <!-- base -->
+  <path d="M55 235h310l16 20H39z" fill="#0e2318"/>
+  <!-- secure badge -->
+  <g transform="translate(300,36)">
+    <rect x="0" y="0" width="86" height="30" rx="15" fill="#2e8c86"/>
+    <path d="M16 15l5 5 9-10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="36" y="20" font-family="system-ui,sans-serif" font-size="11" fill="#fff" font-weight="700">Secure</text>
+  </g>
+</svg>

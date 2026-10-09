@@ -1,0 +1,47 @@
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="{{CA_BASE}}">California</a> / Physicians</p>
+    <h1>The physicians who evaluate you</h1>
+    <p>California patients are evaluated only by physicians who hold a current California license. Here’s our standard — and how you can verify it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    {% if PHYSICIANS_VERIFIED %}
+    <div class="grid grid-3">
+      <!-- build.py note: when verified, render real physician cards from site.config.json here -->
+    </div>
+    {% else %}
+    <div class="panel reveal">
+      <span class="pill">Our standard</span>
+      <h2>California‑licensed, always</h2>
+      <p>
+        Under California rules, a physician may recommend cannabis to a California patient only if they are that patient’s attending
+        physician and hold a <strong>current California medical license</strong> — the standard of care is the same whether a visit happens
+        in person or by telehealth. We will not present a physician licensed only in another state as a California clinician.
+      </p>
+      <ul class="check-list" style="margin-top:1rem">
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Each California physician holds a current California MD or DO license.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Clinical judgment is independent of marketing or booking targets.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>We publish real names, approved photos, and a license‑verification link for each physician as they join.</li>
+      </ul>
+      <div class="callout" style="margin-top:1.2rem">
+        <strong>Verify any California license yourself.</strong> You can look up a physician’s license status on the
+        <a href="https://search.dca.ca.gov/" rel="nofollow">California Department of Consumer Affairs license search</a>.
+      </div>
+    </div>
+
+    <div class="panel panel-ivory reveal" style="margin-top:1.4rem">
+      <h2>Physician profiles — coming before launch</h2>
+      <p><span class="todo-flag">TODO</span> As each California‑licensed physician is contracted and consents, their profile (name, credential, California license type and number, verification link, and relevant experience) will appear here. We will not use stock‑photo “doctors” to stand in for our actual team.</p>
+    </div>
+    {% endif %}
+
+    <div class="panel bg-green reveal" style="margin-top:1.6rem">
+      <h2>Are you a California‑licensed physician?</h2>
+      <p>We’re building a careful, patient‑first telemedicine practice. If you hold a current California MD or DO license, we’d like to hear from you.</p>
+      <p style="margin-top:1rem"><a class="btn btn-ghost" href="{{CAREERS}}">Explore joining our team</a></p>
+    </div>
+  </div>
+</section>

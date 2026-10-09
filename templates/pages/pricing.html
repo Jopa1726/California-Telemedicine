@@ -1,0 +1,59 @@
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="{{CA_BASE}}">California</a> / Pricing</p>
+    <h1>Transparent California pricing</h1>
+    <p>What our evaluation costs, what’s included, and how the optional county MMIC fee is separate from our fee.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    {% if PRICING_PUBLISHED %}
+    <div class="grid grid-2">
+      <div class="panel reveal">
+        <span class="pill">New patients</span>
+        <h2>{{PRICE_NEW}}</h2>
+        <p>A complete telemedicine evaluation with a California‑licensed physician.</p>
+      </div>
+      <div class="panel reveal">
+        <span class="pill">Renewals</span>
+        <h2>{{PRICE_RENEWAL}}</h2>
+        <p>Renew your recommendation with a California‑licensed physician.</p>
+      </div>
+    </div>
+    {% else %}
+    <div class="callout warn reveal">
+      <strong>Pricing is confirmed before launch.</strong>
+      We will publish our exact California fees here once they’re approved. We’d rather show no number than an unverified one.
+      Prices are not yet set because the California service hasn’t launched.
+    </div>
+    {% endif %}
+
+    <div class="panel panel-tint reveal" style="margin-top:1.6rem">
+      <h2>The county MMIC fee is separate — and optional</h2>
+      <p>{{MMIC_FEE_NOTE}}</p>
+      <ul class="check-list" style="margin-top:.8rem">
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Our evaluation fee covers the physician consultation and recommendation. The MMIC is a different thing you may choose to pursue.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>The MMIC is applied for through your county program and paid to the county — <strong>not</strong> to us.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>County MMIC fees are capped by state rule at up to $100 per application or renewal, with a 50% reduction for Medi‑Cal beneficiaries. Exact amounts vary by county.</li>
+      </ul>
+      <p class="media-note" style="margin-top:.6rem">County fee figures per California Department of Public Health MMIC program rules (see <a href="{{CA_BASE}}resources/">Resources</a> for sources).</p>
+    </div>
+
+    <div class="grid grid-2" style="margin-top:1.6rem">
+      <div class="card reveal">
+        <h3>What’s included</h3>
+        <p><span class="todo-flag">TODO</span> The exact list of what the fee includes will be published here once confirmed (for example: the consultation, the written recommendation, and support). We’ll only say “no hidden fees” if that is accurate.</p>
+      </div>
+      <div class="card reveal">
+        <h3>If you’re not approved</h3>
+        <p><span class="todo-flag">TODO</span> Our written not‑approved and refund policy will appear here after legal and clinical sign‑off. We won’t copy a competitor’s money‑back wording or make a promise we haven’t formally adopted.</p>
+      </div>
+    </div>
+
+    <p class="center" style="margin-top:1.6rem">
+      <a class="btn btn-secondary" href="{{CA_BASE}}renewals/">How renewals work</a>
+      <a class="btn btn-ghost" href="{{CA_BASE}}faq/">Pricing FAQ</a>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="theme-color" content="#1f4733">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:site_name" content="{{BRAND_CA}}">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/css/styles.css" as="style">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<!--
+  NOTE: No third-party scripts, trackers, or advertising pixels are loaded.
+  When analytics is enabled, add a privacy-respecting tag here per
+  docs/MEASUREMENT-PRIVACY.md. Never load analytics on clinical-intake/portal flows,
+  and never pass PHI, form answers, documents, or sensitive URL params.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Doctors of Natural Medicine — California",
+  "url": "{{CA_BASE_ABS}}",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Doctors of Natural Medicine",
+    "url": "{{CO_HOME}}"
+  },
+  "medicalSpecialty": "Telemedicine medical cannabis evaluation",
+  "areaServed": { "@type": "State", "name": "California" },
+  "availableService": {
+    "@type": "MedicalProcedure",
+    "name": "Medical cannabis evaluation by telemedicine"
+  }
+}
+</script>
+</head>

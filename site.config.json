@@ -1,0 +1,120 @@
+{
+  "_comment": "SINGLE SOURCE OF TRUTH. Non-engineers can edit values here. Anything marked TODO is an unverified business fact and MUST NOT be published as a claim until confirmed. Flip launchStatus.mode to 'live' ONLY after every item in docs/ASSUMPTIONS-AND-MISSING-FACTS.md 'Blocking before LIVE MODE' is satisfied.",
+
+  "brand": {
+    "name": "Doctors of Natural Medicine",
+    "californiaName": "Doctors of Natural Medicine — California",
+    "shortName": "DrNatMed",
+    "coloradoHome": "https://drnatmed.com/",
+    "californiaBase": "https://drnatmed.com/california/",
+    "canonicalOrigin": "https://drnatmed.com",
+    "coloradoPhone": "(719) 212-8899",
+    "coloradoPhoneHref": "tel:+17192128899",
+    "establishedYear": "2016",
+    "_establishedYearNote": "drnatmed.com Colorado Springs page states 'In 2016 we set ourselves out on a mission'. Used only to describe Colorado history, never California tenure.",
+    "foundingStory": "Doctors of Natural Medicine has operated medical cannabis evaluation clinics across Colorado — in Colorado Springs, Lakewood, Fort Collins, and Pueblo — since 2016."
+  },
+
+  "launchStatus": {
+    "mode": "launch",
+    "_modeOptions": "launch | live",
+    "launchBanner": "California service — launching soon. Join the notify list below; no bookings or payments are being taken yet.",
+    "liveBanner": "Now serving patients located in California by telemedicine.",
+    "bookingEnabled": false,
+    "_bookingEnabledNote": "Hard-gated by build.py. Even if set true, LIVE MODE requires a configured, verified booking provider in integrations.booking."
+  },
+
+  "coloradoClinics": [
+    { "city": "Colorado Springs", "note": "Flagship clinic.", "url": "https://drnatmed.com/colorado-springs/" },
+    { "city": "Lakewood (Denver metro)", "note": "200 Union Blvd., Ste. #200, Lakewood, CO 80228", "url": "https://drnatmed.com/medical-marijuana-doctor-denver/" },
+    { "city": "Fort Collins", "note": "Northern Colorado clinic.", "url": "https://drnatmed.com/fort-colllins-clinic/" },
+    { "city": "Pueblo", "note": "635 West Corona Ave. (verify suite).", "url": "https://drnatmed.com/pueblo/" }
+  ],
+
+  "pricing": {
+    "published": false,
+    "_publishedNote": "Keep false until California fees are approved. When false, pages show a transparent 'pricing confirmed before launch' message instead of a number.",
+    "currency": "USD",
+    "newEvaluation": "TODO_CA_NEW_EVAL_PRICE",
+    "renewal": "TODO_CA_RENEWAL_PRICE",
+    "notApprovedPolicy": "TODO_CONFIRM: Written refund/not-approved policy for California. Do NOT reuse Colorado's policy or copy a competitor's money-back wording until legal/clinical sign-off.",
+    "whatsIncluded": "TODO_CONFIRM: exact list of what the fee includes (consultation, recommendation letter, re-issue, support). State 'no hidden fees' only if true.",
+    "stateMmicFeeNote": "Separate from our fee: the optional county MMIC costs up to $100 per application/renewal (50% off for Medi-Cal), set and collected by your county — not by us."
+  },
+
+  "physicians": {
+    "verified": false,
+    "_verifiedNote": "Keep false until at least one California-licensed MD/DO is contracted and consents to being listed with license-verification link. While false, the physicians section shows a credential-standard statement, not fake bios.",
+    "list": [
+      {
+        "name": "TODO_PHYSICIAN_NAME",
+        "credential": "TODO_MD_or_DO",
+        "caLicenseType": "TODO_MBC_or_OMBC",
+        "caLicenseNumber": "TODO_LICENSE_NUMBER",
+        "licenseVerifyUrl": "https://search.dca.ca.gov/",
+        "focus": "TODO_RELEVANT_EXPERIENCE",
+        "photo": "TODO_APPROVED_HEADSHOT_PATH_OR_LEAVE_EMPTY"
+      }
+    ]
+  },
+
+  "reviews": {
+    "coloradoAggregate": {
+      "show": true,
+      "ratingText": "4.9-star average across 2,000+ Google reviews",
+      "_sourceNote": "Stated on drnatmed.com homepage. Label clearly as Colorado reviews. Do NOT present as California telemedicine feedback.",
+      "label": "Reviews from our Colorado patients"
+    },
+    "californiaReviews": {
+      "show": false,
+      "_note": "Empty until we have approved, attributable California telemedicine reviews with consent and source links."
+    }
+  },
+
+  "integrations": {
+    "booking": {
+      "provider": "demo-adapter",
+      "_providerNote": "demo-adapter NEVER confirms a real appointment. Replace with the approved, BAA-covered scheduling vendor before LIVE MODE. Confirm HIPAA BAA, privacy config, and that no PHI leaks to analytics.",
+      "newPatientUrl": "TODO_CA_NEW_PATIENT_BOOKING_URL",
+      "renewalUrl": "TODO_CA_RENEWAL_BOOKING_URL",
+      "coloradoBookingUrl": "https://drnatmed.com/appointment/"
+    },
+    "forms": {
+      "endpoint": "TODO_FORM_ENDPOINT",
+      "_endpointNote": "Public inquiry/notify/recruitment forms post minimal contact data to an approved endpoint (e.g., a serverless function or vetted form provider). NEVER collect diagnoses, medical history, or ID documents in public forms. CV uploads disabled until secure storage + access controls exist.",
+      "cvUploadEnabled": false
+    },
+    "analytics": {
+      "enabled": false,
+      "_enabledNote": "Disabled in preview. When enabled, use a privacy-respecting analytics tool configured per docs/MEASUREMENT-PRIVACY.md. No advertising pixels or session replay anywhere. Never send PHI, form answers, documents, or sensitive URL params."
+    }
+  },
+
+  "entity": {
+    "confirmed": false,
+    "_confirmedNote": "California's corporate practice of medicine doctrine (Bus. & Prof. Code sec. 2400) generally bars a non-licensed corporation from employing physicians. The marketing/administrative business and the professional medical entity that delivers care are likely distinct. Name them accurately ONLY once the structure and MSO/PC relationship is legally confirmed.",
+    "administrativeBusiness": "TODO_ADMIN_ENTITY_LEGAL_NAME",
+    "professionalMedicalEntity": "TODO_CA_PROFESSIONAL_MEDICAL_CORP_NAME",
+    "relationshipStatement": "TODO: one sentence describing how the administrative brand supports an independent California professional medical entity whose physicians exercise independent clinical judgment."
+  },
+
+  "contact": {
+    "supportEmail": "TODO_CA_SUPPORT_EMAIL",
+    "supportHours": "TODO_CA_SUPPORT_HOURS_WITH_TIMEZONE",
+    "notifyConsentText": "I agree to receive launch updates about the California service. I can unsubscribe anytime. This is separate from any clinical consent.",
+    "_mailingAddressNote": "No California street address, map, or local listing is published — the service is telemedicine-only. Do not fabricate a CA office."
+  },
+
+  "legal": {
+    "lastReviewed": "TODO_DATE",
+    "medicalReviewer": "TODO: Only state 'medically reviewed by <name>, <credential>' after a qualified clinician actually reviews the content. Do not fabricate.",
+    "policies": {
+      "privacy": "TODO_APPROVED_PRIVACY_POLICY",
+      "terms": "TODO_APPROVED_TERMS",
+      "telehealthConsent": "TODO_APPROVED_TELEHEALTH_INFORMED_CONSENT",
+      "cancellation": "TODO_APPROVED_CA_CANCELLATION_POLICY",
+      "refund": "TODO_APPROVED_CA_REFUND_POLICY",
+      "accessibilityTarget": "WCAG 2.2 AA"
+    }
+  }
+}
