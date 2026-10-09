@@ -233,6 +233,11 @@ def build():
     # .nojekyll so GitHub Pages serves files as-is (no Jekyll processing)
     with open(os.path.join(OUT, ".nojekyll"), "w", encoding="utf-8") as f:
         f.write("")
+    # Root index: redirects the bare base URL to /california/ (handy for GitHub Pages
+    # project sites where the repo root has no landing page).
+    root_redirect = read(os.path.join(PAGES, "_root-redirect.html"))
+    with open(os.path.join(OUT, "index.html"), "w", encoding="utf-8") as f:
+        f.write(root_redirect)
     print(f"Built {len(PAGE_MAP)} pages -> {OUT}")
     print(f"Launch mode: {ctx['LAUNCH_MODE']}  |  Booking live: {flags['BOOKING_LIVE']}  |  Pricing published: {flags['PRICING_PUBLISHED']}")
     if not flags["BOOKING_LIVE"]:
