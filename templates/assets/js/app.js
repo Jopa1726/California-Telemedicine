@@ -61,6 +61,7 @@
   } catch (e) {}
 
   var LAUNCH_MODE = document.body.getAttribute("data-launch-mode") !== "live";
+  var BASE = document.body.getAttribute("data-base") || "";
 
   /* ---------- Booking router (pre-booking state question) ---------- */
   var router = document.getElementById("booking-router");
@@ -89,10 +90,10 @@
              + '<p style="margin:.8rem 0 0"><a class="btn btn-secondary btn-sm" href="https://drnatmed.com/appointment/">Go to Colorado booking</a></p></div>';
       } else if (route === "question") {
         html = '<div class="callout"><strong>Happy to help.</strong> Use the contact options below \u2014 these are public inquiries only, so please don\u2019t include medical details. '
-             + '<p style="margin:.8rem 0 0"><a class="btn btn-ghost btn-sm" href="/california/contact/">Contact &amp; support</a></p></div>';
+             + '<p style="margin:.8rem 0 0"><a class="btn btn-ghost btn-sm" href="' + BASE + '/california/contact/">Contact &amp; support</a></p></div>';
       } else if (route === "physician") {
         html = '<div class="callout"><strong>You\u2019re a clinician.</strong> See how the clinical work operates and start an inquiry. '
-             + '<p style="margin:.8rem 0 0"><a class="btn btn-ghost btn-sm" href="/careers/california-physicians/">For physicians</a></p></div>';
+             + '<p style="margin:.8rem 0 0"><a class="btn btn-ghost btn-sm" href="' + BASE + '/careers/california-physicians/">For physicians</a></p></div>';
       }
       out.innerHTML = html;
       out.hidden = false;

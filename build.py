@@ -36,6 +36,11 @@ PARTIALS = os.path.join(TPL, "partials")
 OUT = os.path.join(ROOT, "public")
 CONFIG = os.path.join(ROOT, "site.config.json")
 
+# Base path prefix for all internal/asset links. Empty for domain-root hosting
+# (production drnatmed.com + local python http.server). Set to "/California-Telemedicine"
+# for a GitHub Pages project site. No trailing slash.
+BASE_PATH = os.environ.get("SITE_BASE_PATH", "").rstrip("/")
+
 # ---- page registry: (template, output path, <title>, meta description, nav key) ----
 PAGE_MAP = [
     ("home.html",            "california/index.html",                      "Medical Cannabis Evaluations in California by Telemedicine | Doctors of Natural Medicine", "California medical cannabis evaluations by telemedicine with a California-licensed physician, from an established clinic brand. See how it works, pricing, and FAQs.", "home"),
@@ -81,11 +86,15 @@ def build_context(cfg):
         "BRAND_CA": brand["californiaName"],
         "BRAND": brand["name"],
         "CO_HOME": brand["coloradoHome"],
-        # Internal links are site-root-relative so they work identically on the
-        # production origin AND in local preview (python3 -m http.server).
-        # Canonicals/OG tags below stay absolute (they must be).
-        "CA_BASE": "/california/",
-        "CAREERS": "/careers/california-physicians/",
+        # BASE_PATH lets the same build work at the domain root (production:
+        # drnatmed.com/california/) OR under a sub-path (GitHub Pages project site:
+        # /California-Telemedicine/). Set via the SITE_BASE_PATH env var, no trailing slash.
+        # Internal + asset links are root-relative so they work identically in local
+        # preview and on the configured base. Canonicals/OG tags stay absolute.
+        "CA_BASE": BASE_PATH + "/california/",
+        "CAREERS": BASE_PATH + "/careers/california-physicians/",
+        "ASSETS": BASE_PATH + "/assets",
+        "BASE_PATH": BASE_PATH,
         "ORIGIN": brand["canonicalOrigin"],
         "CA_BASE_ABS": brand["californiaBase"],
         "CO_PHONE": brand["coloradoPhone"],
@@ -221,6 +230,9 @@ def build():
 
     write_sitemap(ctx, sitemap_urls)
     write_robots(ctx)
+    # .nojekyll so GitHub Pages serves files as-is (no Jekyll processing)
+    with open(os.path.join(OUT, ".nojekyll"), "w", encoding="utf-8") as f:
+        f.write("")
     print(f"Built {len(PAGE_MAP)} pages -> {OUT}")
     print(f"Launch mode: {ctx['LAUNCH_MODE']}  |  Booking live: {flags['BOOKING_LIVE']}  |  Pricing published: {flags['PRICING_PUBLISHED']}")
     if not flags["BOOKING_LIVE"]:
