@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 64" role="img" aria-label="Doctors of Natural Medicine">
+  <!-- Green medical cross -->
+  <g fill="#1f7a5a">
+    <rect x="22" y="2" width="15" height="44" rx="2.5"/>
+    <rect x="7.5" y="16.5" width="44" height="15" rx="2.5"/>
+  </g>
+  <!-- Leaf tucked at the lower-left base, below the cross -->
+  <g fill="#2f8f6b">
+    <path d="M15 60c-5-1.6-8-5-9.4-10.4 5.4-.3 8.6 2.4 10.6 6.8.9-5 2.6-8.4 6.6-11-1 5.4-3.2 9.8-7.8 13v1.6z"/>
+    <path d="M15.6 60.2c3.4-3 6-6 7.4-9.2" stroke="#2f8f6b" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- lowercase "dr" to the right of the leaf -->
+  <text x="26" y="60" font-family="ui-sans-serif,system-ui,'Segoe UI',Arial,sans-serif" font-size="20" font-weight="800" fill="#1f7a5a" letter-spacing="-1">dr</text>
+</svg>
